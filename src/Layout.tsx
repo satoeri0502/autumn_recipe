@@ -9,7 +9,7 @@ export function AppLayout() {
         <header className="h-12 flex justify-center bg-amber-200">
           <Header />
         </header>
-        <main className="flex-1 w-full flex justify-items-center mt-5">
+        <main className="flex-1 w-full grid justify-items-center mt-5">
           <Outlet />
         </main>
         <footer className="w-full bg-amber-200 h-10 flex mt-5">
