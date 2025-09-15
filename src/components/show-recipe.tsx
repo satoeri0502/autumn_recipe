@@ -189,7 +189,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
                   </Button>
                   <TwitterShareButton
                     url="https://autumn-recipe.onrender.com/"
-                    title={`秋の食材レシピ🍁で『${item.recipeTitle}』をチェックしたよ👀\n#秋の食材レシピ🍁\n`}
+                    title={`秋の食材レシピ🍁で\n『${item.recipeTitle}』をチェックしたよ👀\n\n#秋の食材レシピ🍁\n`}
                   >
                     <span className="rounded-lg p-2 px-4 bg-black text-white shadow">
                       <FontAwesomeIcon icon={faXTwitter} />
