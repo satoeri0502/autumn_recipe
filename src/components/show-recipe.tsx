@@ -121,7 +121,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
               <DialogTrigger asChild>
                 <Card
                   key={item.recipeId}
-                  className="w-[360px] md:h-[360px] flex flex-col "
+                  className="max-w-[360px] md:h-[360px] flex flex-col w-full mx-auto"
                 >
                   <CardHeader>
                     <CardTitle className="line-clamp-2">
