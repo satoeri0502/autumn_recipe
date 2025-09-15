@@ -107,7 +107,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="grid sm:grid-cols-1 md:grid-cols-2 gap-2"
+        className="grid sm:grid-cols-1 md:grid-cols-2 gap-2 w-[90vw]"
       >
         {recipes.map((item, index) => (
           <motion.div
@@ -121,7 +121,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
               <DialogTrigger asChild>
                 <Card
                   key={item.recipeId}
-                  className="max-w-[360px] md:h-[360px] flex flex-col w-full mx-auto"
+                  className="md:h-[360px] flex flex-col w-full mx-auto"
                 >
                   <CardHeader>
                     <CardTitle className="line-clamp-2">
