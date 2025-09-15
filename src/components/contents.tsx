@@ -1,13 +1,18 @@
 // src/components/Contents.tsx
 import { fish, fruit, vegetables } from "@/lib/category-list";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { SelectList } from "./select-list";
 import { ShowRecipe } from "./show-recipe";
 
 export function Contents() {
-  const [categoryId, setCategoryId] = useState<string>("12-447");
+  const [categoryId, setCategoryId] = useState<string>("");
+
+  useEffect(() => {
+    // 描画時に初期値を設定
+    setCategoryId("12-447");
+  }, []);
 
   // 食材リスト
   const ingredientList = useMemo(() => [...vegetables, ...fruit, ...fish], []);

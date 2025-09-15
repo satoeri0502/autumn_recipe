@@ -119,7 +119,10 @@ export function ShowRecipe({ selected, categoryId }: Props) {
           >
             <Dialog key={item.recipeId}>
               <DialogTrigger asChild>
-                <Card key={item.recipeId} className="w-[360px] h-[360px]">
+                <Card
+                  key={item.recipeId}
+                  className="w-[360px] md:h-[360px] flex flex-col "
+                >
                   <CardHeader>
                     <CardTitle className="line-clamp-2">
                       {item.recipeTitle}
@@ -148,7 +151,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
                   </CardFooter>
                 </Card>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="w-[95vw] max-w-md sm:max-w-lg max-h-[90vh] overflow-y-auto">
                 <DialogHeader className="grid gap-5">
                   <DialogTitle className="text-xl">
                     {item.recipeTitle}
@@ -158,12 +161,12 @@ export function ShowRecipe({ selected, categoryId }: Props) {
                   </DialogDescription>
                 </DialogHeader>
                 <div>
-                  <p className="text-lg font-bold">
+                  <p className="text-sm font-bold">
                     <FontAwesomeIcon icon={faBowlRice} /> 材料
                   </p>
                   <hr />
                   <ul
-                    className="grid grid-cols-3 px-8 mt-2 
+                    className="grid grid-cols-3 mt-2
                     [&>li]:px-2 [&>li]:py-1 [&>li]:rounded
                   [&>li:nth-child(6n+1)]:bg-amber-50
                   [&>li:nth-child(6n+2)]:bg-amber-50
@@ -173,9 +176,7 @@ export function ShowRecipe({ selected, categoryId }: Props) {
                   [&>li:nth-child(6n+6)]:bg-stone-50"
                   >
                     {item.recipeMaterial?.map((m, index) => (
-                      <li id="material" key={index}>
-                        {m}
-                      </li>
+                      <li key={index}>{m}</li>
                     ))}
                   </ul>
                 </div>
